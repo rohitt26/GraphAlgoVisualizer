@@ -1,0 +1,21 @@
+.row{
+    display: flex;
+}
+.grid-box{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+}
+.col{
+    aspect-ratio: 1;
+    width:var(--cell-width);
+    border:3px solid black;
+    background-color: lightcyan;
+    font-size: 9px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    user-select: none;
+    overflow: hidden;
+}

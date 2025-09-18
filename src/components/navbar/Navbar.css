@@ -1,0 +1,142 @@
+nav{
+    position: relative;
+    padding:4px;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--clr-navy);
+}
+
+.logo {
+    padding: 0 16px;
+    color: white;
+    font-size:25px;
+    display: flex;
+    flex-direction: column;
+    font-weight: bolder;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    transition:0.5s;
+}
+.logo:hover {
+    transform: translateY(-50%) scale(1.1);
+    text-shadow:
+        1px 1px 0 black,
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 0 0 black,
+        -1px 0 0 black,
+        0 1px 0 black,
+        0 -1px 0 black;
+}
+
+
+.btn{
+    background-color: var(--primary-clr);
+    color:white;
+    margin-top: 10px;
+    padding: 8px 16px;
+    border-radius:5px;
+    border:2px solid rgba(255, 255, 255, 0.294);
+    cursor:pointer;
+    justify-self:start;
+    text-align: center;
+    font-size:large;
+    font-weight:600;
+    transition: 0.5s;
+    user-select: none;
+}
+.btn:hover{
+    background-color: #f98383;
+    border:2px solid black;
+    color:black;
+}
+.nav-menu{
+    display:flex;
+    align-items:center;
+    margin-top: 10px;
+    user-select: none;
+}
+.drop-box{
+    position:relative;
+}
+.drop-box.active .drop-menu{
+    display:block;
+}
+.drop-box .drop-menu{
+    position:absolute;
+    background-color: var(--clr-navy);
+    min-width:120px;
+    padding:4px;
+    border-radius:8px;
+    right:0;
+    top:calc(100% + 20px);
+    display:none;
+    z-index: 10;
+}
+.nav-menu>li>a{
+    color:white;
+    padding:8px 16px;
+    display:flex;
+    font-weight: 600;
+    align-items:center;
+    gap:4px;
+    white-space: nowrap;
+}
+.nav-menu>li>a:hover{
+    color:var(--secondary-clr);
+}
+.nav-menu>li.active>a{
+    background-color:var(--primary-clr);
+}
+.nav-menu>li.active>a:hover{
+    color:white;
+}
+.drop-menu>li>a:hover{
+    background-color: var(--primary-clr);
+}
+.drop-menu>li>a{
+color:white;
+padding:8px;
+display:block;
+border-radius:4px;
+margin-top:2px;
+}
+/* doubt */
+.drop-menu>li.active>a{
+    background-color:var(--primary-clr);
+}
+
+.caret{
+    display:block;
+    aspect-ratio:1;
+    width:14px;
+    background:url("../../assets/icon/caret-down.svg")
+}
+
+
+@media (max-width: 925px) {
+    .logo {
+        font-size: 20px;
+        top:40px;
+    }
+}
+
+/* 
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .logo {
+        font-size: 22px;
+        padding: 0 12px;
+    }
+}
+@media (min-width: 1025px) {
+    .logo {
+        font-size: 25px;
+        padding: 0 16px;
+    }
+} */
